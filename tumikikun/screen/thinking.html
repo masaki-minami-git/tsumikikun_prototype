@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>かんがえよう！|れっつごーつみきくん</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/destyle.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+  <main>
+    <!-- <div id="startModal">
+      <div class="explanation1">
+        <h2>あそびかたせつめい</h2>
+        <p>これがステージ！</p>
+        <p>つみきくんがどうすすめばおんぷをぜんぶとれるかなあ</p>
+        </div><div class="frame">
+          <img src="./title_backimg/sougen.jpg">
+        </div>
+    </div>
+    <div id="secondModal"><div class="explanation2"><h2>つみきのせつめい</h2><p>これは<span>ひとつまえにすすむ</span>つみき</p></div><div class="cube">
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+      <div><span></span></div>
+    </div>
+  </div>
+
+    <div id="thirdModal"><div class="explanation3"><h2>つみきのせつめい</h2><p>これは<span>ジャンプしてひとマスこえる</span>つみき</p></div><div class="cubeLong">
+      <div class="men1"><span></span></div>
+      <div class="men2"><span></span></div>
+      <div class="men3"><span></span></div>
+      <div class="men4"><span></span></div>
+      <div class="men5"><span></span></div>
+      <div class="men6"><span></span></div>
+    </div>
+  </div> -->
+  <!-- <div id=""></div> -->
+    <div id="wrap">
+    <div id="walk"><img src="./hero_img/heitai_walk_small.gif"></div>
+    <div id="flexWrap">
+    <div id="mainBlock">
+      <h2><span>つ</span><span>み</span><span>き</span>をくんで<br><span>しゃしん</span>をとってね！</h2>
+      <button id="openModal">しゃしんとったよ！</button>
+    </div>
+    <div class="frame"><img src="./title_backimg/sougen.jpg"></div>
+    </div>
+    </div>
+  </main>
+
+  <!-- モーダルエリアここから -->
+  <section id="modalArea" class="modalArea">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modalWrapper modalWrapper_1">
+      <div class="modalContents  modalContents_1">
+        <div class="checkImg"><img  width="100px" src="../U22_web/img.png"></div>
+        <p>このしゃしんでいいかな？</p>
+        <div class="row-con">
+          <!-- <form action="json_decode.php" method="post">
+          <input  type = "hidden" id ="json" name="sample" value="">
+          <input type="submit" class="signUpButton" id="openbutton" value="はい">
+          </form> -->
+          <p class="signUpButton" id="openbutton">はい</p>
+          <p class="signUpButton" id="closeModalbutton">いいえ</p>
+        </div><!--row-con-->
+      </div><!--modalContents-->
+      <div id="closeModal" class="closeModal">
+        ×
+      </div><!--closeModal-->
+    </div><!--modalWrapper-->
+  </section>
+
+  <!-- モーダルエリアここから -->
+  <section id="modalArea2" class="modalArea">
+    <div id="modalBg2" class="modalBg"></div>
+    <div class="modalWrapper modalWrapper_2">
+      <div class="modalContents modalContents_2">
+        <h2>なんかいくりかえす？</h2>
+        <div class="scroll">
+            <ul id="block_lay"></ul>
+            <!-- <p>これでいい？</p> -->
+            <div class="row-con">
+                <p class="signUpButton" id="success">はい</p>
+                <p class="signUpButton" id="backModalbutton">いいえ</p>
+            <div>
+              </div>
+      </div>
+      <div id="closeModal2" class="closeModal">
+        ×
+      </div>
+    </div>
+  </section> 
+
+<!-- モーダルエリアここから -->
+<section id="modalArea3" class="modalArea">
+  <div id="modalBg3" class="modalBg"></div>
+  <div class="modalWrapper modalWrapper_3">
+    <div class="modalContents modalContents_3">
+      <form action="json_decode.php" method="post">
+        <input  type = "hidden" id ="json" name="sample" value="">
+        <div class="btn_area">
+          <a class="btn-emergency">
+            <span class="btn-emergency-bottom"></span>
+            <span class="btn-emergency-top">
+              <input type="submit" class="signUpButton" id="go" value="実行">
+            </span>
+          </a>
+        </div>
+      </form>
+    </div>
+    <div id="closeModal3" class="closeModal">
+      ×
+    </div>
+  </div>
+</section>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/event.js"></script>
+  <script src="js/tutorial.js"></script>
+
+</body>
+</html>

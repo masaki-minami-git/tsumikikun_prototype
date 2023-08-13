@@ -1,0 +1,85 @@
+.btn_area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    height: auto;
+    width: auto;
+    border: solid red 1px;
+    // ボタンサイズを変える
+    font-size: 10px;
+}
+
+.btn-emergency{
+    position: relative;
+    display: block;
+    width: 12.5em;
+    height: 7.5em;
+    margin: 0 auto;
+    border: solid green 1px;
+}
+// hoverした時
+.btn-emergency:hover .btn-emergency-top{
+    top: 0.8em;
+    height: 3em;
+    cursor: pointer;
+}
+// クリックした時
+.btn-emergency:active .btn-emergency-top{
+    top: 1.2em;
+    height: 3em;
+    cursor: pointer;
+}
+
+// ボタン側面
+.btn-emergency-top{
+    position: absolute;
+    top: 0;
+    left: 1.3em;
+    width: 10em;
+    height: 3.8em;
+    margin-top: 2em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 0 0 50% 50%;
+    background: #d62d2d;
+}
+.btn-emergency-top:before{
+    position: absolute;
+    top: -2em;
+    left: 0;
+    width: 10em;
+    height: 4em;
+    content: "";
+    border-radius: 5em / 2em;
+    background: #ed4c4c;
+}
+
+// 文字
+.btn-emergency-top span{
+    // 文字サイズ
+    font-size: 2.5em;
+    font-weight: bold;
+    position: absolute;
+    top: -0.4em;
+    left: 0;
+    width: 100%;
+    -webkit-transform: scaleY(0.75);
+    transform: scaleY(0.75);
+    text-align: center;
+    color: #f6a3a3;
+}
+// 土台
+.btn-emergency-bottom{
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    width: 12.5em;
+    height: 4.5em;
+    border-radius: 6.25em / 2.15em;
+    background: #d8e4ea;
+    -webkit-box-shadow: 0 1em 0 #c4cacc;
+    box-shadow: 0 0.5em 0 #c4cacc;
+}

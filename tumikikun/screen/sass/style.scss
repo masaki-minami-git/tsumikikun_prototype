@@ -1,0 +1,674 @@
+// cover@charset "UTF-8";
+// メインエリア
+main{
+    overflow: hidden;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-image: url(../title_backimg/tumikiBack.jpeg);
+    background-position: -30rem bottom;
+    // 遊び方説明
+    //モーダル1
+    #startModal{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(17, 17, 17, 0.95);
+        .explanation1{
+            height: 70%;
+            width: 100%;
+            position: relative;
+            margin-top: 10%;
+            margin-left: 5%;
+            color: #fff;
+            h2{
+                margin-bottom: 2em;
+            }
+            p{
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+        }
+        .frame_stage{
+            position: absolute;
+            right: 8%;
+            top: 10%;
+            padding-top: 3rem;
+            width: 60%;
+            img{
+                position: absolute;
+                right: 0;
+                width: 70%;
+            }
+        }
+    }
+    // モーダル2
+    #secondModal{
+      position: absolute;
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(17, 17, 17, 0.95);
+      z-index: 999;
+      .explanation2{
+          margin-left: 10%;
+          margin-right: auto;
+          margin-top: 15%;
+          font-size: 2rem;
+          width: 50vh;
+          text-align: center;
+          color: #fff;
+          position: relative;
+          h2{
+            margin-bottom: 2em;
+          }
+          p{
+              margin-bottom: 1rem;
+              font-size: 2rem;
+              span{
+                font-size: 2.3rem;
+                color: #e1c700;
+              }
+          }
+      }
+      .cube{
+        animation: rotate-anim 5s linear infinite;
+        margin-right: 30%;
+        margin-top: 15%;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg) rotateY(-25deg); /* 初期角度 */
+        div{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #FFF;
+          font-size: 60px;
+        }
+      }
+      .cube div:nth-child(1) {
+        background-image: url(../title_backimg/yellowTumiki.jpeg);
+        transform: translateZ(100px);
+        border-radius: 3px;
+      }
+      .cube div:nth-child(2) {
+        background-image: url(../title_backimg/yellowTumiki.jpeg);
+        transform: rotateY(180deg) translateZ(100px);
+        border-radius: 3px;
+      }
+      .cube div:nth-child(3) {
+        background-image: url(../title_backimg/yellowTumiki.jpeg);
+        transform: rotateY(90deg) translateZ(100px);
+        border-radius: 3px;
+      }
+      .cube div:nth-child(4) {
+        background-image: url(../title_backimg/yellowTumiki.jpeg);
+        transform: rotateY(-90deg) translateZ(100px);
+        border-radius: 3px;
+      }
+      .cube div:nth-child(5) {
+        background-image: url(../title_backimg/yellowTumiki.jpeg);
+        transform: rotateX(90deg) translateZ(100px);
+        border-radius: 3px;
+      }
+      .cube div:nth-child(6) {
+        background-image: url(../title_backimg/yellowTumiki.jpeg);
+        transform: rotateX(-90deg) translateZ(100px);
+        border-radius: 3px;
+      }
+    }
+    //モーダル3
+    #thirdModal{
+      position: absolute;
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(17, 17, 17, 0.95);
+      z-index: 999;
+      border: solid navy 1px;
+      .explanation3{
+        margin-left: 10%;
+        margin-right: auto;
+        margin-top: 15%;
+        font-size: 2rem;
+        width: 50vh;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        h2{
+          margin-bottom: 2em;
+        }
+        p{
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            span{
+              font-size: 2.3rem;
+              color: #e1c700;
+            }
+        }
+      }
+      .cubeLong{
+        height: min-content;
+        animation: rotate-animL 8s linear infinite;
+        margin-right: 40%;
+        margin-top: 5%;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg) rotateY(-25deg); /* 初期角度 */
+        div{
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #FFF;
+          font-size: 60px;
+        }
+        .men1{
+          background-image: url(../title_backimg/blueTumiki.jpeg);
+          transform: translateZ(100px);
+          border-radius: 10px;
+          width: 200px;
+          height: 500px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #FFF;
+          font-size: 60px;
+        }
+        .men2{
+          background-image: url(../title_backimg/blueTumiki.jpeg);
+          transform: rotateY(180deg) translateZ(100px);
+          border-radius: 10px;
+          width: 200px;
+          height: 500px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #FFF;
+          font-size: 60px;
+        }
+        .men3{
+          background-image: url(../title_backimg/blueTumiki.jpeg);
+          transform: rotateY(90deg) translateZ(100px);
+          border-radius: 10px;
+          width: 200px;
+          height: 500px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #FFF;
+          font-size: 60px;
+        }
+        .men4{
+          background-image: url(../title_backimg/blueTumiki.jpeg);
+          transform: rotateY(-90deg) translateZ(100px);
+          border-radius: 10px;
+          width: 200px;
+          height: 500px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #FFF;
+          font-size: 60px;
+        }
+        .men5{
+          background-image: url(../title_backimg/blueTumiki.jpeg);
+          transform: rotateX(90deg) translateZ(100px);
+          border-radius: 10px;
+          width: 200px;
+          height: 200px;
+        }
+        .men6{
+          background-image: url(../title_backimg/blueTumiki.jpeg);
+          transform: rotateX(-90deg) translateZ(400px);
+          border-radius: 10px;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+    // wrap
+    #wrap{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        #walk{
+            left: 0%;
+            bottom: 0%;
+            width: 100%;
+            height: 25rem;
+            position: absolute;
+            img{
+                height: 100%;
+            }
+            animation:15s infinite walk linear;
+        }
+        #flexWrap{
+            // display: flex;
+            #mainBlock{
+                padding-top: 10%;
+                margin: 0 auto;
+                h2{
+                    width: auto;
+                    // border: solid red 1px;
+                    text-align: left;
+                    color: #000000;
+                    font-size: 2.5rem;
+                    margin: 2rem;
+                    margin-bottom: 5rem;
+                    span{
+                        font-style: normal;
+                        font-size: 4rem;
+                    }
+                    span:nth-of-type(1){
+                        text-shadow: 5px 5px 5px #000000;
+                        color: #D7362F;
+                    }
+                    span:nth-of-type(2){
+                        text-shadow: 5px 5px 5px #000000;
+                        color: #FFE70D;
+                    }
+                    span:nth-of-type(3){
+                        text-shadow: 5px 5px 5px #000000;
+                        color: #5C9E3C;
+                    }
+                    span:nth-of-type(4){
+                        color: #3865A9;
+                        text-shadow: 5px 5px 5px #000000;
+                    }
+                }
+                button{
+                      text-align: center;
+                      position: absolute;
+                      left: 15%;
+                      --width: 15rem;
+                      --timing: 2s;
+                      border: 0;
+                      width: var(--width);
+                      padding-block: 2em;
+                      color: #FFD600;
+                      font-weight: bold;
+                      font-size: 1.5em;
+                      background: #3865A9;
+                      transition: all 0.5s;
+                      border-radius: 15px;
+                      // animation-delay: 0.7s;
+                }
+                /*波形を2つ設定*/
+                button::after,
+                button::before{
+                    content: '';
+                    /*絶対配置で波形の位置を決める*/
+                    position: absolute;
+                    left: -25%;
+                    top: -25%;
+                    /*波形の形状*/
+                    border: 2px solid #76a9e7;
+                    width: 150%;
+                    height: 150%;
+                    border-radius: 25px;
+                    /*はじめは不透明*/
+                    opacity: 1;
+                    /*ループするアニメーションの設定*/
+                    animation:3s circleanime linear infinite;
+                }
+                /*波形の2つ目は0.5秒遅らせてアニメーション*/
+                button::before{
+                  animation-delay:1.5s; 
+                }
+                button:hover{
+                  background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+                  animation: var(--timing) linear dance6123 infinite;
+                  transform: scale(1.1) translateY(-1px);
+                  color: #fff;
+                }
+            }
+        }
+        .frame{
+            position: absolute;
+            right: 3%;
+            top: 0;
+            padding-top: 3rem;
+            width: 55vw;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* ==================================
+  モーダルCSS
+ ================================== */
+/* 画面全面の背景色の適用 */
+.modalArea{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    /*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 全面背景のモーダル解除のエリア */
+    /* モーダルウィンドウ */
+    .modalBg{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(30, 30, 30, 0.9);
+    }
+    .modalWrapper{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 70vh;
+      min-height: 70vh;
+      padding: 10px 30px;
+      background-color: #fff;
+      /* モーダル解除のアイコン */
+      .modalContents{
+          p{
+              font-size: 2rem;
+              line-height: 2.0rem;
+              margin-bottom: 20px;
+              text-align: center;
+          }
+          .row-con{
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+              flex-direction:row-reverse;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              .signUpButton{
+                margin: 0 1rem;
+                padding: 0;
+                width: 100px;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 5px;
+                background-color: #3865A9;
+                color: #FFD600;
+                text-align: center;
+                font-size: 1.5rem;
+                cursor : pointer;
+              }
+          }
+      }
+      .closeModal{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+      }
+    }
+    .modalWrapper_1{
+      min-height: 80%;
+      .modalContents_1{
+        height: 70%;
+          //モーダルの画像
+          .checkImg{
+            margin: 1.5rem auto;
+            margin-top: 4rem;
+            width: 30%;
+            img{
+                width: 100%;
+            }
+          }
+          p{
+            margin-top: 2rem;
+          }
+      }
+    }
+    .modalWrapper_2{
+      width: 70vw;
+      height: 90vh;
+      .modalContents_2{
+        position: relative;
+        display: flex;
+        height: 100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        h2{
+          margin-top: 15rem;
+          margin-right: 3rem;
+          margin-left: 1rem;
+          font-size: 2rem;
+        }
+        .scroll{
+          // border: solid green 1px;
+          overflow:scroll;
+          overflow-x: hidden;
+          height: 80%;
+          width: 40%;
+          margin-top: 1rem;
+        }
+        #block_lay{
+          position: relative;
+          width: 70%;
+          height: 100Vh;
+          text-align: left;
+          padding-top: 3rem;
+          li{
+            margin-top: 2rem;
+            display: inline;
+            height: min-content;
+            width: 100%;
+            position: relative;
+            img{
+              width: 100%;
+              display: inline;
+            }
+          }
+          .pulse-btn{
+            height: fit-content;
+          }
+          // ループのつみきの要素
+          .buttoncon{
+            height: min-content;
+            width: 100%;
+            position: relative;
+            .pulse-btn{
+              width: 100%;
+            }
+            li{
+              height: 100%;
+              width: 100%;
+            }
+            .loopTsumiki{
+              position: absolute;
+              right: -26%;
+              top: -10%;
+              transform: translateY(-50%);
+              -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+              z-index: 100;
+              width: 20%;
+              height: 6rem;
+              .downImg,.upImg{
+                display: inline;
+                cursor: pointer;
+                width: 100%;
+              }
+              div:nth-of-type(2){
+                width: auto;
+                height: 2rem;
+                p{
+                  font-size: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 実行ボタン
+    .modalWrapper_3{
+      .modalContents_3{
+        margin: 0 auto;
+        .btn_area{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          height: auto;
+          width: auto;
+          // ボタンサイズを変える
+          font-size: 10px;
+      }
+      
+      .btn-emergency{
+          position: relative;
+          display: block;
+          width: 12.5em;
+          height: 7.5em;
+          margin: 0 auto;
+      }
+      // hoverした時
+      .btn-emergency:hover .btn-emergency-top{
+          top: 0.8em;
+          height: 3em;
+          cursor: pointer;
+      }
+      // クリックした時
+      .btn-emergency:active .btn-emergency-top{
+          top: 1.2em;
+          height: 3em;
+          cursor: pointer;
+      }
+      
+      // ボタン側面
+      .btn-emergency-top{
+          position: absolute;
+          top: 0;
+          left: 1.3em;
+          width: 10em;
+          height: 3.8em;
+          margin-top: 2em;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          border-radius: 0 0 50% 50%;
+          background: #d62d2d;
+      }
+      .btn-emergency-top:before{
+          position: absolute;
+          top: -2em;
+          left: 0;
+          width: 10em;
+          height: 4em;
+          content: "";
+          border-radius: 5em / 2em;
+          background: #ed4c4c;
+      }
+      
+      // 文字
+      .btn-emergency-top .signUpButton{
+          // 文字サイズ
+          font-size: 2.5em;
+          font-weight: bold;
+          position: absolute;
+          top: -0.4em;
+          left: 0;
+          width: 100%;
+          -webkit-transform: scaleY(0.75);
+          transform: scaleY(0.75);
+          text-align: center;
+          color: #f6a3a3;
+      }
+      // 土台
+      .btn-emergency-bottom{
+          position: absolute;
+          top: 2.5em;
+          left: 0;
+          width: 12.5em;
+          height: 4.5em;
+          border-radius: 6.25em / 2.15em;
+          background: #d8e4ea;
+          -webkit-box-shadow: 0 1em 0 #c4cacc;
+          box-shadow: 0 0.5em 0 #c4cacc;
+      }
+      }
+    }
+}
+
+@keyframes walk{
+    0%{
+        transform: translateX(-50%);
+    }
+    49%{
+        transform: translateX(100%)rotateY(0);
+    }
+    50%{
+        transform: translateX(100%)rotateY(180deg);
+    }
+    100%{
+        transform: translateX(-100%)rotateY(180deg);
+    }
+}
+
+html{
+  font-family: 'Mochiy Pop One', sans-serif !important;
+}
+
+/*波形のアニメーション*/
+@keyframes circleanime{
+  0%{
+    transform: scale(0.68);
+  }
+  100%{
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* this button is inspired from this -- https://www.newline.co/pricing */
+
+@keyframes dance6123{
+  to{
+    background-position: var(--width);
+  }
+}
+
+@keyframes standOut{
+  0%{
+    transform: scale(0.8);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.8);
+  }
+}
+
+@keyframes rotate-animL{
+  0% {transform: rotateX(0) rotateY(0); }
+  50%{
+    transform:  rotateX(-10deg)rotateY(180deg) translate(-200px, 0px); 
+  }
+  100% {transform:  rotateX(-20deg)rotateY(360deg) translate(-100px, 0px); }
+}
+@keyframes rotate-anim {
+  0% {transform: rotateX(0) rotateY(0); }
+  100% {transform:  rotateX(-90deg)rotateY(360deg); }
+}

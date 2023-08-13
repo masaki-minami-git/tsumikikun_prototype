@@ -1,0 +1,3 @@
+{
+    "process": [ "walk", "jump", "jump", "jump", "walk", "jump", "turn", "walk", "walk", "jump", "jump", "jump", "walk", "jump", "walk" ]
+}

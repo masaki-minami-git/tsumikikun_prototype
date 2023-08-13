@@ -1,0 +1,79 @@
+.Wrap{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    img{
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+        -ms-filter: blur(6px);
+        filter: blur(6px);
+    }
+    .box{
+        width: 50%;
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        .comp_area{
+            width: 50%;
+            height: 15%;
+            position: absolute;
+            top: 9%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #3865A9;
+            border-radius: 9999px;
+            font-size: 1.7vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFD600;
+        }
+        .login_area{
+            width: 27%;
+            height: 10%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            font-size: 1.3vw;
+            background-color: #3865A9;
+            color: #FFD600;
+            border-radius: 9999px;
+            box-shadow:  0 0.3em 0.1em #1d365a;
+            transition: 0.3s;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        .login_area:hover{
+            top: 50.5%;
+            box-shadow: none;
+        }
+    }
+}
+
+body{
+    font-size: clamp(16px, 1vw, 100px);
+    font-family: 'Mochiy Pop One', sans-serif;
+}

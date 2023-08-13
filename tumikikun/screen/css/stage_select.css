@@ -1,0 +1,449 @@
+.videoWrap {
+  z-index: -10;
+  position: relative;
+}
+
+.videoWrap .video-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.videoWrap .video-box .video {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh;
+  height: 56.25vw;
+  transition: 0.4s;
+}
+
+.videoWrap .video-box .mv1 {
+  opacity: 1;
+}
+
+.videoWrap .video-box::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+}
+
+main .top_div {
+  width: 100%;
+  height: 13%;
+  position: absolute;
+  top: 2%;
+  color: #FFD600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .top_div .title_back {
+  position: absolute;
+  left: 5%;
+  font-size: 1.5vw;
+  transition: 0.5s;
+}
+
+main .top_div .title_back a {
+  display: block;
+  width: auto;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .top_div .title_back:hover {
+  cursor: pointer;
+  transform: scale(1.15, 1.15);
+  transition: 0.5s;
+}
+
+main .top_div .stage {
+  width: 27%;
+  height: 100%;
+  background-color: #3865A9;
+  border-radius: 9999px;
+  font-size: 3.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .stage_area {
+  z-index: 1;
+  height: 85%;
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+main .stage_area .stage_position {
+  position: absolute;
+  transition: 0.5s;
+  width: 18vw;
+  height: 36vh;
+}
+
+main .stage_area .stage_position .stage_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+main .stage_area .stage_position .stage_content a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main .stage_area .stage_position .stage_content .circle_area {
+  z-index: -3;
+  width: 14.5vmax;
+  height: 14.5vmax;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+main .stage_area .stage_position .stage_content .circle {
+  background-color: #2a2a2a;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border: solid #ffffff 1vw;
+  border-radius: 50%;
+}
+
+main .stage_area .stage_position .stage_content #img1-1 {
+  background-image: url(../stage_img/tutorial.jpg);
+}
+
+main .stage_area .stage_position .stage_content #img1-2 {
+  background-image: url(../stage_img/s1.png);
+}
+
+main .stage_area .stage_position .stage_content #img1-3 {
+  background-image: url(../stage_img/stage1-3.png);
+}
+
+main .stage_area .stage_position .stage_content #img1-4 {
+  background-image: url(../stage_img/stage1-4.png);
+}
+
+main .stage_area .stage_position .stage_content #img1-5 {
+  background-image: url(../stage_img/stage1-5.png);
+  background-size: 250%;
+}
+
+main .stage_area .stage_position .stage_content #img2-1 {
+  background-image: url(../stage_img/stage1-5.jpg);
+}
+
+main .stage_area .stage_position .stage_content #img2-2 {
+  background-image: url(../stage_img/stage1-5.jpg);
+}
+
+main .stage_area .stage_position .stage_content #img2-3 {
+  background-image: url(../stage_img/stage1-5.jpg);
+}
+
+main .stage_area .stage_position .stage_content #img2-4 {
+  background-image: url(../stage_img/stage1-5.jpg);
+}
+
+main .stage_area .stage_position .stage_content #img2-5 {
+  background-image: url(../stage_img/stage1-5.jpg);
+}
+
+main .stage_area .stage_position .stage_content #img3-1 {
+  background-image: url(../stage_img/stage1-5.jpg);
+}
+
+main .stage_area .stage_position .stage_content .tag_area {
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+main .stage_area .stage_position .stage_content .tag_area .stage_num {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  width: 10vmin;
+  height: 10vmin;
+  background-color: #D76562;
+  border-radius: 50%;
+  font-size: 1.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .stage_area .stage_position .stage_content .tag_area .stage_info {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 85%;
+  height: 8vmin;
+  background-color: #3865A9;
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .stage_area .stage_position .stage_content .tag_area .stage_info p {
+  margin-left: clamp(2em, 1vw, 2em);
+}
+
+main .stage_area .stage_position:hover {
+  cursor: pointer;
+  transform: scale(1.15, 1.15);
+  transition: 0.5s;
+}
+
+main .stage_area .s1 {
+  top: 15%;
+  left: 5%;
+}
+
+main .stage_area .s2 {
+  bottom: 8%;
+  left: 22%;
+}
+
+main .stage_area .s3 {
+  top: 2%;
+  left: 36%;
+}
+
+main .stage_area .s4 {
+  bottom: 10%;
+  right: 30%;
+}
+
+main .stage_area .s5 {
+  top: 7%;
+  right: 12%;
+}
+
+main .stage_area .po3-1 {
+  top: 20%;
+  left: 40%;
+  transform: scale(1.3, 1.3);
+}
+
+main .stage_area .po3-1:hover {
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+  transition: 0.5s;
+}
+
+main .stage_area .root_area {
+  z-index: -10;
+  height: 35vmin;
+  width: 35vmin;
+  position: absolute;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+main .stage_area .root_area span {
+  z-index: -1;
+  position: relative;
+  display: block;
+  width: 35vmin;
+  height: 35vmin;
+  border-radius: 50vmin;
+  border: solid #ffffff 3vmin;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+main .stage_area #root1 {
+  top: 27%;
+  left: 17%;
+  transform: rotate(220deg);
+}
+
+main .stage_area #root2 {
+  top: 22%;
+  left: 25%;
+  transform: rotate(130deg);
+}
+
+main .stage_area #root3 {
+  top: 30%;
+  right: 40%;
+  transform: rotate(50deg);
+}
+
+main .stage_area #root4 {
+  top: 27%;
+  right: 24%;
+  transform: rotate(140deg);
+}
+
+.arrow {
+  z-index: 100;
+  position: absolute;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 5%;
+  height: 30%;
+}
+
+.arrow p {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  display: block;
+}
+
+.arrow p .triangle,
+.arrow p .triangle::before,
+.arrow p .triangle::after {
+  width: 3vmax;
+  height: 3vmax;
+  background: #FFD600;
+}
+
+.arrow p .triangle::before,
+.arrow p .triangle::after {
+  content: "";
+  position: absolute;
+}
+
+.arrow p .triangle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  display: block;
+  border-top-left-radius: 30%;
+}
+
+.arrow p .triangle::before {
+  border-top-right-radius: 30%;
+  transform: skewX(-45deg) translateX(50%);
+}
+
+.arrow p .triangle::after {
+  border-bottom-left-radius: 30%;
+  transform: skewY(-45deg) translateY(50%);
+}
+
+.arrow p #t_left {
+  transform: rotate(40deg) skewY(50deg) scaleX(0.86666);
+  right: 0%;
+}
+
+.arrow p #t_right {
+  transform: rotate(220deg) skewY(50deg) scaleX(0.86666);
+  left: 0%;
+}
+
+.arrow #p_left {
+  right: 0;
+}
+
+.arrow #p_right {
+  left: 0;
+}
+
+.arrow p:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  animation: allow_hover 1s ease-in infinite normal;
+}
+
+#left {
+  top: 45%;
+  left: 0;
+}
+
+#right {
+  top: 50%;
+  right: 0;
+}
+
+.screen {
+  position: relative;
+  width: 100vW;
+  height: 100%;
+}
+
+body {
+  font-size: clamp(16px, 1vw, 100px);
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+
+@keyframes allow_hover {
+  0% {
+    transform: scale(1.15, 1.15);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+#opAnimeWrap {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  z-index: 888;
+}
+
+#opAnimeWrap #opAnime {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh;
+  height: 56.25vw;
+}
+/*# sourceMappingURL=stage_select.css.map */

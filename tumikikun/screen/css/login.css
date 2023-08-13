@@ -1,0 +1,128 @@
+.Wrap {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Wrap img {
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+
+.Wrap .box {
+  width: 50%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.Wrap .box .login_area {
+  width: 50%;
+  height: 15%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  background-color: #3865A9;
+  border-radius: 9999px;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFD600;
+}
+
+.Wrap .box .form_area {
+  height: 70%;
+  width: 65%;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  border: solid #3865A9 2px;
+  border-radius: 10px;
+  background-color: #f6f0e8c3;
+}
+
+.Wrap .box .form_area form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Wrap .box .form_area form .comment {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.Wrap .box .form_area form .value {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  height: 13%;
+  width: 90%;
+}
+
+.Wrap .box .form_area form .value .data {
+  border: solid #3865A9 2px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  padding-left: 1vw;
+}
+
+.Wrap .box .form_area form .send_area {
+  width: 40%;
+  height: 13%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #3865A9;
+  box-shadow: 0 0.3em 0.1em #1d365a;
+  border-radius: 9999px;
+  color: #FFD600;
+  transition: 0.3s;
+}
+
+.Wrap .box .form_area form .send_area input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Wrap .box .form_area form .send_area:hover {
+  bottom: 9%;
+  box-shadow: none;
+}
+
+body {
+  font-size: clamp(16px, 1vw, 100px);
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+/*# sourceMappingURL=login.css.map */
